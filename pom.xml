@@ -12,7 +12,7 @@
 
     <groupId>com.github.erodriguezg</groupId>
     <artifactId>beanvalidation-utils</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <name>github erodriguezg beanvalidation utils</name>
     <description>Validadores y utilitarios para Bean Validation (JSR-303)</description>
     <url>https://github.com/erodriguezg/beanvalidation-utils</url>
@@ -38,6 +38,14 @@
             <url>https://github.com/erodriguezg</url>
             <id>erodriguezg</id>
         </developer>
+
+        <developer>
+            <email>robertoques1@gmail.com</email>
+            <name>Roberto Díaz</name>
+            <url>https://github.com/robertoques</url>
+            <id>robertoques</id>
+        </developer>
+
     </developers>
 
     <distributionManagement>
