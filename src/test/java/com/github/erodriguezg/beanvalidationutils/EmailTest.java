@@ -55,4 +55,11 @@ public class EmailTest {
         assertThat(violations).hasSize(1);
     }
 
+    @Test
+    public void invalidoTest2() {
+        Foo foo = new Foo("user@dominio..com");
+        Set<ConstraintViolation<Foo>> violations = this.validator.validate(foo);
+        assertThat(violations).hasSize(1);
+    }
+
 }
