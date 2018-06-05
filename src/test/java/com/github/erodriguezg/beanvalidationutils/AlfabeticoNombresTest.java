@@ -1,6 +1,7 @@
 package com.github.erodriguezg.beanvalidationutils;
 
-import com.github.erodriguezg.beanvalidationutils.annotations.Email;
+import com.github.erodriguezg.beanvalidationutils.annotations.Alfabetico;
+import com.github.erodriguezg.beanvalidationutils.annotations.AlfabeticoNombres;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,16 +14,15 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Created by takeda on 03-01-16.
+ * Created by rdiaz on 05-06-18.
  */
-public class EmailTest {
+public class AlfabeticoNombresTest {
 
     class Foo {
-        @Email
-        private final String email;
-
-        public Foo(String email) {
-            this.email = email;
+        @AlfabeticoNombres
+        private final String texto;
+        public Foo(String rut) {
+            this.texto = rut;
         }
     }
 
@@ -36,13 +36,13 @@ public class EmailTest {
 
     @Test
     public void validoTest() {
-        Foo foo = new Foo("valido@github.com");
+        Foo foo = new Foo("abcdefghijklmnopqrstuvwxyz.-,'");
         Set<ConstraintViolation<Foo>> violations = this.validator.validate(foo);
         assertThat(violations).isEmpty();
     }
 
     @Test
-    public void validoNuloTest() {
+    public void nuloValidoTest() {
         Foo foo = new Foo(null);
         Set<ConstraintViolation<Foo>> violations = this.validator.validate(foo);
         assertThat(violations).isEmpty();
@@ -50,14 +50,7 @@ public class EmailTest {
 
     @Test
     public void invalidoTest() {
-        Foo foo = new Foo("no valido");
-        Set<ConstraintViolation<Foo>> violations = this.validator.validate(foo);
-        assertThat(violations).hasSize(1);
-    }
-
-    @Test
-    public void invalidoTest2() {
-        Foo foo = new Foo("user@dominio..com");
+        Foo foo = new Foo("123456!%$");
         Set<ConstraintViolation<Foo>> violations = this.validator.validate(foo);
         assertThat(violations).hasSize(1);
     }

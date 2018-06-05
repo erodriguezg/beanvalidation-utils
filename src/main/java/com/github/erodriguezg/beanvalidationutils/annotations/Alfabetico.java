@@ -20,7 +20,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Constraint(validatedBy = AlfabeticoValidator.class)
 @Documented
 public @interface Alfabetico {
-    String message() default "Por favor ingrese un valor alfabetico";
+    String message() default "Por favor ingrese un valor alfabético";
 
     Class<?>[] groups() default {};
 
