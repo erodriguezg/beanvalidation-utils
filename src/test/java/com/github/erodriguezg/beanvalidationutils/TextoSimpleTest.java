@@ -32,7 +32,7 @@ public class TextoSimpleTest {
 
     @Test
     public void validoTest() {
-        TextoSimpleTest.Foo foo = new TextoSimpleTest.Foo("Mensaje : Sr. Ñoño Pingüino, buenos días!.");
+        TextoSimpleTest.Foo foo = new TextoSimpleTest.Foo("Mensaje : Sr. Ñoño Pingüino, buenos días!. ().,¡!¿?:;-_ ");
         Set<ConstraintViolation<TextoSimpleTest.Foo>> violations = this.validator.validate(foo);
         assertThat(violations).isEmpty();
     }
