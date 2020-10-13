@@ -63,7 +63,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.slf4j>1.7.25</version.slf4j>
         <version.erodriguezg-java-utils>8.3.6</version.erodriguezg-java-utils>
-        <version.junit>4.12</version.junit>
+        <version.junit>4.13.1</version.junit>
         <version.assertj>2.2.0</version.assertj>
         <version.mockito>1.10.19</version.mockito>
         <version.hibernate-validator>4.3.2.Final</version.hibernate-validator>
